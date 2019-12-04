@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navbar/>
+    <section class="hero">
+      <Hero/>
+    </section>
+    <section class="value-props">
+      <SectionHeader
+              header= "How can we help?"
+              subtitle= "We represent Product Management" />
+
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import SectionHeader from './pages/landing/SectionHeader.vue'
+
+import Navbar from './components/Navbar.vue'
+import Hero from './components/Hero.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Navbar,
+    Hero,
+    SectionHeader
   }
 }
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+body {
+  margin: 0px;
 }
 </style>
