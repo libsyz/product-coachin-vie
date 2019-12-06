@@ -1,27 +1,50 @@
 
 <template>
   <div>
-    <h1> {{ header }} </h1>
-    <p> {{ subtitle }} </p>
+    <Card v-for="card in cards" :key="card.id"
+     :header="card.header"
+     :content="card.content"
+     :imgUrl="card.image"
+     />
 
-    <ul>
-      <li v-for='card in cards' :key="card"> {{ cards }} </li>
-    </ul>
   </div>
 </template>
 
 <script>
+  import Card from './../../components/Card.vue';
   export default {
     name: 'section-header',
     props: {
       header: String,
       subtitle: String
     },
-    data: function() {
-            cards: [
-              "what up",
-              "my man"
+    components: {
+      Card
+    },
+    data() {
+      return {
+        cards: [
+              {
+                id: 1,
+                header: "assess",
+                content: "We try to underWe try to understand the key needs in a product organization by understanding their processes.",
+                image: require('../../assets/landing/assess.svg')
+              },
+              {
+                id: 2,
+                header: "boost",
+                content: "Through training and workshops we help new product managers acquire key skills and problem solve",
+                image: require("../../assets/landing/boost.svg")
+              },
+              {
+                id: 3,
+                header: "enable",
+                content: "Our coaching approach to drive product managers and teams to the next level.",
+                image: require("../../assets/landing/enable.svg")
+              }
             ]
+      }
+
       }
     }
 
@@ -29,6 +52,14 @@
 
 
 <style scoped>
+
+  div {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+
+  }
 
   h1 {
     font-weight: bold;
