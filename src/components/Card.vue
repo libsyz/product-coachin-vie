@@ -1,6 +1,6 @@
 
 <template>
-  <div>
+  <div class='card'>
     <h2> {{ header }}</h2>
     <img :src="imgUrl" alt="Why not rendering">
     <p> {{ content }}</p>
@@ -22,7 +22,7 @@
 
 <style scoped>
 
-  div {
+  .card {
     width: 250px;
     height: 400px;
     display: flex;
@@ -34,10 +34,12 @@
 
   h2 {
     text-transform: uppercase;
+    padding-bottom: 30px;
   }
 
   img {
     height: 125px;
+    padding-bottom: 30px
   }
 
 </style>

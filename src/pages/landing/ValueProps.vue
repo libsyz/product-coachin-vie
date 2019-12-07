@@ -1,6 +1,7 @@
 
 <template>
   <div>
+
     <Card v-for="card in cards" :key="card.id"
      :header="card.header"
      :content="card.content"
@@ -13,7 +14,7 @@
 <script>
   import Card from './../../components/Card.vue';
   export default {
-    name: 'section-header',
+    name: 'value-props',
     props: {
       header: String,
       subtitle: String
@@ -54,11 +55,8 @@
 <style scoped>
 
   div {
-    width: 80%;
     display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-
+    justify-content: space-between;
   }
 
   h1 {
