@@ -17,12 +17,13 @@
               :bodyText="card.bodyText"
               :bodyCta="card.bodyCta" />
     </section>
-    <section>
+    <section class="testimonials">
       <TestimonialsLanding/>
       <CarouselTestimonials/>
-
     </section>
-
+    <section class="join-our-events">
+      <JoinOurEvents/>
+    </section>
   </div>
 </template>
 
@@ -30,6 +31,7 @@
 
 import ValueProps from './pages/landing/ValueProps.vue';
 import TestimonialsLanding from './pages/landing/TestimonialsLanding.vue';
+import JoinOurEvents from './pages/landing/JoinOurEvents.vue';
 
 import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
@@ -44,7 +46,8 @@ export default {
     ValueProps,
     CardModality,
     TestimonialsLanding,
-    CarouselTestimonials
+    CarouselTestimonials,
+    JoinOurEvents
   },
   data() {
     return {
@@ -93,5 +96,10 @@ body {
   background-color: #F0EFFF;
   display: flex;
   justify-content: space-between;
+}
+
+.join-our-events {
+  padding: 60px 100px;
+  background-color: #F0EFFF;
 }
 </style>
