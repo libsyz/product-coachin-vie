@@ -32,6 +32,9 @@
       <p> We are proud to have some of the best minds in product management, technology and design. </p>
       <CarouselTeam/>
     </section>
+    <section class="stay-in-touch">
+      <StayInTouch/>
+    </section>
 
   </div>
 </template>
@@ -42,6 +45,7 @@ import ValueProps from './pages/landing/ValueProps.vue';
 import TestimonialsLanding from './pages/landing/TestimonialsLanding.vue';
 import JoinOurEvents from './pages/landing/JoinOurEvents.vue';
 import Benefits from './pages/landing/Benefits.vue'
+import StayInTouch from './pages/landing/StayInTouch.vue'
 
 import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
@@ -60,7 +64,8 @@ export default {
     CarouselTestimonials,
     CarouselTeam,
     JoinOurEvents,
-    Benefits
+    Benefits,
+    StayInTouch
   },
   data() {
     return {
@@ -119,5 +124,14 @@ body {
 .benefits {
   padding: 60px 100px;
   background-color: #fff;
+}
+
+.mavericks-team {
+  padding: 60px 100px;
+  background-color: #F0EFFF;
+}
+
+.stay-in-touch {
+  padding: 60px 100px;
 }
 </style>

@@ -51,7 +51,7 @@
     data() {
       return {
         currentOffset: 0,
-        windowSize: 3,
+        windowSize: 1,
         // pagination factor is determined by card width + margin
         paginationFactor: 620,
         linkedIn: "https://image.flaticon.com/icons/png/512/61/61109.png",
@@ -176,7 +176,6 @@
   display: flex;
   min-width: 600px;
   margin: 0 10px;
-  padding-top: 40px;
   cursor: pointer;
   box-shadow: 0 4px 15px 0 rgba(40, 44, 53, 0.06),
               0 2px 2px 0 rgba(40, 44, 53, 0.08);

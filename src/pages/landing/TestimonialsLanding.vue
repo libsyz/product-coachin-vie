@@ -21,7 +21,6 @@
 
   .testimonials-landing {
     background-color: #F0EFFF;
-
   }
 
 </style>
