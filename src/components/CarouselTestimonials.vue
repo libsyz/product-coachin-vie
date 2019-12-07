@@ -13,16 +13,16 @@
                v-for="testimonial in items"
                :key="testimonial.id">
 
-            <img src="https://placehold.it/200x200"/>
+            <img :src="testimonial.imgUrl"/>
+
             <div class="card-carousel--card--information">
               <p class="information-testimonial">
-              </p>
-              <p class="information-referrer">
                 {{ testimonial.blurb }}
               </p>
-              <p>
+              <p class="information-referrer">
                 {{ testimonial.referrer}}
               </p>
+
 
             </div>
           </div>
@@ -45,15 +45,37 @@
       return {
         currentOffset: 0,
         windowSize: 3,
-        paginationFactor: 220,
+        // pagination factor is determined by card width + margin
+        paginationFactor: 620,
         items: [
-          {id:1, blurb: 'Kin Khao', referrer: "Aaron Johnson"},
-          {id:2, blurb: 'Jū-Ni', referrer: "Aaron Johnson"},
-          {id:3, blurb: 'Delfina', referrer: "Aaron Johnson"},
-          {id:4, blurb: 'San Tung', referrer: "Aaron Johnson"},
-          {id:5, blurb: 'Anchor Oyster Bar', referrer: "Aaron Johnson"},
-          {id:6, blurb: 'Locanda', referrer: "Aaron Johnson"},
-          {id:7, blurb: 'Garden Creamery', referrer: "Aaron Johnson"},
+          {id:1,
+           imgUrl: "https://static.wixstatic.com/media/6dbf99_5190935e819b40bea5b617e7e2161cf3~mv2.png/v1/fill/w_240,h_240,al_c,q_80,usm_0.66_1.00_0.01/David%20Rey%20-%20Profile%20Photo_edited.webp",
+           blurb: '"Working with Mavericks was incredible, they completely transformed the product function and thanks to them our digital products are performing like never before."',
+           referrer: "Aaron Johnson, Chief Marketing Office at Intercom International"},
+          {id:2,
+           imgUrl: "https://static.wixstatic.com/media/6dbf99_71be2b366af142f583dbbedf99dcccc3~mv2.jpg/v1/crop/x_16,y_0,w_686,h_685/fill/w_240,h_240,al_c,q_80,usm_0.66_1.00_0.01/6dbf99_71be2b366af142f583dbbedf99dcccc3~mv2.webp",
+           blurb: '"Working with Mavericks was incredible, they completely transformed the product function and thanks to them our digital products are performing like never before."',
+           referrer: "Aaron Johnson, Chief Marketing Office at Intercom International"},
+          {id:3,
+           imgUrl: "https://static.wixstatic.com/media/6dbf99_2b3977dee16b4f208f236dbee3923c14~mv2_d_1280_1280_s_2.jpg/v1/fill/w_240,h_240,al_c,q_80,usm_0.66_1.00_0.01/Photo_edited.webp",
+           blurb: '"Working with Mavericks was incredible, they completely transformed the product function and thanks to them our digital products are performing like never before."',
+           referrer: "Aaron Johnson, Chief Marketing Office at Intercom International"},
+          {id:4,
+           imgUrl: "https://static.wixstatic.com/media/6dbf99_3eb744aaa9cc441d821a81d4beb5c48a~mv2.jpg/v1/crop/x_0,y_138,w_960,h_945/fill/w_244,h_240,al_c,q_80,usm_0.66_1.00_0.01/Jean.webp",
+           blurb: '"Working with Mavericks was incredible, they completely transformed the product function and thanks to them our digital products are performing like never before."',
+           referrer: "Aaron Johnson, Chief Marketing Office at Intercom International"},
+          {id:5,
+           imgUrl: "https://static.wixstatic.com/media/6dbf99_cb964b4cd17a4b029d73af3a523b32c7~mv2.jpg/v1/crop/x_0,y_12,w_499,h_474/fill/w_240,h_240,al_c,q_80,usm_0.66_1.00_0.01/adria_edited.webp",
+           blurb: '"Working with Mavericks was incredible, they completely transformed the product function and thanks to them our digital products are performing like never before."',
+           referrer: "Aaron Johnson, Chief Marketing Office at Intercom International"},
+          {id:6,
+           imgUrl: "https://static.wixstatic.com/media/6dbf99_4045af698b2d4969990f34e27ba99345~mv2.jpg/v1/crop/x_0,y_21,w_853,h_810/fill/w_240,h_240,al_c,q_80,usm_0.66_1.00_0.01/lynette_edited.webp",
+           blurb: '"Working with Mavericks was incredible, they completely transformed the product function and thanks to them our digital products are performing like never before."',
+           referrer: "Aaron Johnson, Chief Marketing Office at Intercom International"},
+          {id:7,
+           imgUrl: "https://static.wixstatic.com/media/6dbf99_0b82bfb582924ef0b6b7fa41a46d47a3~mv2.jpg/v1/crop/x_0,y_18,w_710,h_675/fill/w_252,h_240,al_c,q_80,usm_0.66_1.00_0.01/isabel_edited.webp",
+           blurb: '"Working with Mavericks was incredible, they completely transformed the product function and thanks to them our digital products are performing like never before."',
+           referrer: "Aaron Johnson, Chief Marketing Office at Intercom International"},
         ]
       }
     },
@@ -105,8 +127,8 @@
   height: 15px;
   padding: 10px;
   box-sizing: border-box;
-  border-top: 2px solid #42b883;
-  border-right: 2px solid #42b883;
+  border-top: 2px solid #6C63FF;
+  border-right: 2px solid #6C63FF;
   cursor: pointer;
   margin: 0 20px;
   transition: transform 150ms linear;
@@ -138,6 +160,7 @@
   display: flex;
   min-width: 600px;
   margin: 0 10px;
+  padding-top: 40px;
   cursor: pointer;
   box-shadow: 0 4px 15px 0 rgba(40, 44, 53, 0.06),
               0 2px 2px 0 rgba(40, 44, 53, 0.08);
@@ -152,17 +175,32 @@
 .card-carousel--card:last-child {
   margin-right: 0;
 }
- .card-carousel--card img {
+
+
+.card-carousel--card--information {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.information-testimonial {
+  font-style: italic;
+  font-size: 16px;
+}
+
+.information-referrer {
+  font-size: 12px;
+}
+
+
+.card-carousel--card img {
   vertical-align: bottom;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   transition: opacity 150ms linear;
   user-select: none;
 }
-.card-carousel--card img:hover {
-  opacity: 0.5;
-}
-
 
 
 h1 {
