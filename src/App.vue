@@ -17,16 +17,24 @@
               :bodyText="card.bodyText"
               :bodyCta="card.bodyCta" />
     </section>
+    <section>
+      <TestimonialsLanding/>
+      <CarouselTestimonials/>
+
+    </section>
+
   </div>
 </template>
 
 <script>
 
-import ValueProps from './pages/landing/ValueProps.vue'
+import ValueProps from './pages/landing/ValueProps.vue';
+import TestimonialsLanding from './pages/landing/TestimonialsLanding.vue';
 
-import Navbar from './components/Navbar.vue'
-import Hero from './components/Hero.vue'
-import CardModality from './components/CardModality.vue'
+import Navbar from './components/Navbar.vue';
+import Hero from './components/Hero.vue';
+import CardModality from './components/CardModality.vue';
+import CarouselTestimonials from './components/CarouselTestimonials.vue';
 
 export default {
   name: 'app',
@@ -34,7 +42,9 @@ export default {
     Navbar,
     Hero,
     ValueProps,
-    CardModality
+    CardModality,
+    TestimonialsLanding,
+    CarouselTestimonials
   },
   data() {
     return {

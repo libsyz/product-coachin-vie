@@ -38,7 +38,9 @@
   max-width: 444px;
   width: 544px;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 15px 35px rgba(126,87,88,.1),
+              0 5px 15px rgba(0,0,0,.07);
+
   padding: 40px 40px;
 }
 
