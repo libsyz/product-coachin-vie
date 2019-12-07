@@ -24,6 +24,9 @@
     <section class="join-our-events">
       <JoinOurEvents/>
     </section>
+    <section class="benefits">
+      <Benefits/>
+    </section>
   </div>
 </template>
 
@@ -32,6 +35,7 @@
 import ValueProps from './pages/landing/ValueProps.vue';
 import TestimonialsLanding from './pages/landing/TestimonialsLanding.vue';
 import JoinOurEvents from './pages/landing/JoinOurEvents.vue';
+import Benefits from './pages/landing/Benefits.vue'
 
 import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
@@ -47,7 +51,8 @@ export default {
     CardModality,
     TestimonialsLanding,
     CarouselTestimonials,
-    JoinOurEvents
+    JoinOurEvents,
+    Benefits
   },
   data() {
     return {
@@ -101,5 +106,10 @@ body {
 .join-our-events {
   padding: 60px 100px;
   background-color: #F0EFFF;
+}
+
+.benefits {
+  padding: 60px 100px;
+  background-color: #fff;
 }
 </style>

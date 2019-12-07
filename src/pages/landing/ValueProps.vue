@@ -74,15 +74,4 @@
   }
 
 
-
-
-  .header-underline {
-    position: absolute;
-    width: 200px;
-    max-height: 1px;
-    border: solid 1px #000;
-    bottom: 5px;
-    left: 10%;
-    width: 80%;
-}
 </style>

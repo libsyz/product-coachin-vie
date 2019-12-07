@@ -2,10 +2,10 @@
 <template>
   <div class="card-events-outer">
     <div class="card-events-top">
-        <p class="top-text">
+        <div class="top-text">
         {{ informationHeader }}
           <span class="text-underline"> </span>
-        </p>
+        </div>
 
       </div>
     <div class="card-events-bottom">
@@ -38,7 +38,6 @@
 <style scoped>
 
   .card-events-outer{
-
     margin: 0 auto;
     background-color: #fff;
     padding: 20px 60px;
@@ -53,7 +52,7 @@
    }
 
    .card-events-top {
-      padding-bottom: 10px;
+      padding-bottom: 30px;
    }
 
   .top-text {
@@ -67,11 +66,11 @@
 
   .text-underline {
     position: absolute;
-    width: 200px;
+    width: 75%;
     max-height: 1px;
     border: solid 1px #000;
     bottom: -7px;
-    left: 0px;
+    left: 10%;
 }
 
    .card-events-bottom {
