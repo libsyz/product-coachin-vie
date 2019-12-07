@@ -27,6 +27,12 @@
     <section class="benefits">
       <Benefits/>
     </section>
+    <section class="mavericks-team">
+      <h1> Meet our Amazing Team </h1>
+      <p> We are proud to have some of the best minds in product management, technology and design. </p>
+      <CarouselTeam/>
+    </section>
+
   </div>
 </template>
 
@@ -41,6 +47,7 @@ import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
 import CardModality from './components/CardModality.vue';
 import CarouselTestimonials from './components/CarouselTestimonials.vue';
+import CarouselTeam from './components/CarouselTeam.vue';
 
 export default {
   name: 'app',
@@ -51,6 +58,7 @@ export default {
     CardModality,
     TestimonialsLanding,
     CarouselTestimonials,
+    CarouselTeam,
     JoinOurEvents,
     Benefits
   },
