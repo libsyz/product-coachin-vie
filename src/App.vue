@@ -35,7 +35,7 @@
     <section class="stay-in-touch">
       <StayInTouch/>
     </section>
-
+    <Footer/>
   </div>
 </template>
 
@@ -52,6 +52,7 @@ import Hero from './components/Hero.vue';
 import CardModality from './components/CardModality.vue';
 import CarouselTestimonials from './components/CarouselTestimonials.vue';
 import CarouselTeam from './components/CarouselTeam.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'app',
@@ -65,7 +66,8 @@ export default {
     CarouselTeam,
     JoinOurEvents,
     Benefits,
-    StayInTouch
+    StayInTouch,
+    Footer
   },
   data() {
     return {

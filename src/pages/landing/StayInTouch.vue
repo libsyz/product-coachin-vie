@@ -33,7 +33,7 @@
     border: solid 1px #F0EFFF;
     text-align: center;
     box-shadow: 0 15px 35px rgba(126,87,88,.1),
-              0 5px 15px rgba(0,0,0,.07);
+                0 5px 15px rgba(0,0,0,.07);
 
   }
 
