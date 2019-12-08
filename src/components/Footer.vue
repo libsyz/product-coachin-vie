@@ -12,11 +12,16 @@
           <li>(65) 82998997 </li>
         </ul>
       </div>
-      <div class="company-social">
-        <li> Facebook </li>
-        <li> LinkedIn </li>
-        <li> Instagram </li>
-      </div>
+      <ul class="company-social">
+        <li class="company-social-logo">
+          <font-awesome-icon :icon="['fab', 'facebook-square']"/> </li>
+        <li class="company-social-logo">
+          <font-awesome-icon :icon="['fab', 'linkedin']"/>
+        </li>
+        <li class="company-social-logo">
+          <font-awesome-icon :icon="['fab', 'instagram']"/>
+        </li>
+      </ul>
     </div>
 
     <div class="footer-right">
@@ -77,6 +82,20 @@
     list-style-type: none;
     padding-inline-start: 0px;
     line-height: 25px;
+    cursor: pointer;
+  }
+
+
+  .company-social {
+    text-align: left;
+    font-size: 25px;
+    list-style-type: none;
+    padding-inline-start: 0px;
+  }
+
+  .company-social-logo {
+    display: inline;
+    margin-right: 15px;
     cursor: pointer;
   }
 
