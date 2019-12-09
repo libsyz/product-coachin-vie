@@ -3,8 +3,8 @@
   <nav>
     <Logo/>
     <div class="nav-links">
-      <p> For Companies </p>
-      <p> For Individuals </p>
+      <router-link class="nav-link" to="/landing-page"> Home  </router-link>
+      <router-link class="nav-link" to="/for-companies"> For Companies </router-link>
       <p> About us </p>
       <Button label="Contact"/>
     </div>
@@ -50,4 +50,11 @@ p {
   cursor: pointer;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+
 </style>
+
+
