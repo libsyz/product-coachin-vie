@@ -8,7 +8,7 @@
           <li>1 Harbourfront Avenue, #13-03, </li>
           <li>Keppel Bay Tower, </li>
           <li>Singapore 098632 </li>
-          <li>hello@mavericks-consulting.com </li>
+          <li> <strong>hello@mavericks-consulting.com </strong></li>
           <li>(65) 82998997 </li>
         </ul>
       </div>
