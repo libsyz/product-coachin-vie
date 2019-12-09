@@ -1,7 +1,7 @@
 <template>
-
+  <div class="landing">
       <Hero/>
-<!--     <section class="value-props">
+    <section class="value-props">
       <ValueProps
       header= "How can we help?"
       subtitle= "We represent Product Management" />
@@ -31,8 +31,8 @@
     </section>
     <section class="stay-in-touch">
       <StayInTouch/>
-    </section> -->
-
+    </section>
+    </div>
 </template>
 
 <script>
@@ -40,30 +40,28 @@
 import Hero from './../../components/Hero.vue'
 
 
-// import ValueProps from './ValueProps.vue';
-// import TestimonialsLanding from './TestimonialsLanding.vue';
-// import JoinOurEvents from './JoinOurEvents.vue';
-// import Benefits from './Benefits.vue';
-// import StayInTouch from './StayInTouch.vue';
-
-
-// import CardModality from './../../components/CardModality.vue'
-// import CarouselTestimonials from './../../components/CarouselTestimonials.vue'
-// import CarouselTeam from './../../components/CarouselTeam.vue'
+import ValueProps from './ValueProps.vue';
+import TestimonialsLanding from './TestimonialsLanding.vue';
+import JoinOurEvents from './JoinOurEvents.vue';
+import Benefits from './Benefits.vue';
+import StayInTouch from './StayInTouch.vue';
+import CardModality from './../../components/CardModality.vue'
+import CarouselTestimonials from './../../components/CarouselTestimonials.vue'
+import CarouselTeam from './../../components/CarouselTeam.vue'
 
 
   export default  {
     name: 'landing-page',
     components: {
-      Hero
-      // ValueProps,
-      // CardModality,
-      // TestimonialsLanding,
-      // CarouselTestimonials,
-      // CarouselTeam,
-      // JoinOurEvents,
-      // Benefits,
-      // StayInTouch
+      Hero,
+      ValueProps,
+      CardModality,
+      TestimonialsLanding,
+      CarouselTestimonials,
+      CarouselTeam,
+      JoinOurEvents,
+      Benefits,
+      StayInTouch
     },
     data() {
       return {
