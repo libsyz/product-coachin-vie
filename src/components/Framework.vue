@@ -23,12 +23,7 @@
       <div class="content-phase-description">{{ setPhaseHeader(phases) }}</div>
       <div class="content-phase-deliverables"> Space for deliverables </div>
     </div>
-      <!-- <input type="email" placeholder="productcoaching@mavericks.com">
-      <button class="contact-button" @click="switchPhase"> Get In Touch </button> -->
-      <!-- onclick function to be link to script -->
-
   </div>
-
 </template>
 
 <script>
