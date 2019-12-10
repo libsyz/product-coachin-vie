@@ -21,6 +21,10 @@
 
 <style scoped>
 
+  div {
+    height: 300px;
+  }
+
   form {
     padding-top: 20px;
   }
@@ -49,4 +53,6 @@
     font-size: 16px;
     font-family: 'Open Sans';
   }
+
+
 </style>
