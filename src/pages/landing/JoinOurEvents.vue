@@ -38,7 +38,6 @@
 <style scoped>
 
   .card-events-outer{
-    position: absolute;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px 60px;

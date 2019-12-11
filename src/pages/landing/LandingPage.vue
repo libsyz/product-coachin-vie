@@ -86,4 +86,5 @@ import CarouselTeam from './../../components/CarouselTeam.vue'
 </script>
 
 <style scoped>
+
 </style>
