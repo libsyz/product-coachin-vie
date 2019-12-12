@@ -20,10 +20,21 @@
       </div>
     </div>
   </div>
-  <div class="framework-content">
-    <div class="content-phase-description">{{ currentPhase }}</div>
-    <div class="content-phase-deliverables">
+  <div class="framework-content-wrapper">
+    <div class="content-description">
+      <div class="content-header">
+        {{ currentPhase }}
+      </div>
+      <div class="content-details">
+        <ul>
+          <li v-for="detail in currentPhaseDetails"
+              :key="detail.id"> {{ detail.content }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-deliverables">
       <ul>
+        Key deliverables
         <li v-for="deliverable in currentDeliverables"
             :key="deliverable.id"> {{ deliverable.detail }}</li>
       </ul>
@@ -43,6 +54,13 @@
       {
         type: String,
         default: "The Value"
+      },
+      currentPhaseDetails: {
+        type: Array,
+        default: () => [
+          { content: "hello" },
+          { content: "what is up"}
+        ]
       },
       currentDeliverables:
       {
@@ -218,12 +236,29 @@
   line-height: 16px;
 }
 
-.framework-content {
+.framework-content-wrapper {
   display: flex;
   justify-content: space-around;
   align-content: center;
   height: 300px;
   background-color: #fff;
+}
+
+.content-header {
+
+}
+
+.content-details {
+
+}
+
+.content-deliverables {
+
+}
+
+.phase-description-header {
+  text-transform: uppercase;
+
 }
 
 </style>

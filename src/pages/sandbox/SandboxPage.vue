@@ -1,20 +1,20 @@
 <template>
   <section class='sandbox'>
-    <Framework/>
+    <tryout/>
   </section>
 
 </template>
 
 <script lang="js">
 
-import Framework from './../../components/Framework.vue'
+import tryout from './../../components/tryout.vue'
 
 
   export default  {
     name: 'sandbox-page',
     props: [],
     components: {
-      Framework
+      tryout
     },
     mounted () {
 
