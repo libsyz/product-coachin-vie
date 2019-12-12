@@ -7,6 +7,7 @@
     :key="phase.id"
     @mouseenter="hover(phase, true); applyFilter($event)"
     @mouseleave="hover(phase, false); removeFilter($event)"
+    @click="changeHeader(); changeDeliverables()"
     :class="{ active: phase.hover }"
     >
     <img class="framework-phase-image"
@@ -21,7 +22,12 @@
   </div>
   <div class="framework-content">
     <div class="content-phase-description">{{ currentPhase }}</div>
-    <div class="content-phase-deliverables"> {{ currentDeliverables }} </div>
+    <div class="content-phase-deliverables">
+      <ul>
+        <li v-for="deliverable in currentDeliverables"
+            :key="deliverable.id"> {{ deliverable }}</li>
+      </ul>
+    </div>
   </div>
 </div>
 </template>
@@ -31,11 +37,18 @@
   export default  {
     name: 'framework',
     mounted() {
-      this.currentPhase = this.setPhase;
-      this.currentDeliverables = this.setDeliverables;
     },
     props: {
-      currentPhase: String,
+      currentPhase:
+      {
+        type: String,
+        default: "The Value"
+      },
+      currentDeliverables:
+      {
+        type: Array,
+        default: () => ["This is a value", "This is another value"]
+      }
     },
     methods: {
       hover(phase, bool) {
@@ -47,13 +60,23 @@
       removeFilter(event){
        event.target.children[0].style.filter = 'invert(100%)' + 'sepia(0%)' + 'saturate(7941%)' +  'hue-rotate(140deg)' + 'brightness(106%)' + 'contrast(102%)';
       },
-      setPhase() {
-        return 4;
+      setPhase(phase) {
+        return phase.name;
       },
-      setDeliverables() {
-        return 4;
-    }
-
+      setDeliverables(phase) {
+        return phase.name;
+      },
+      changeHeader() {
+        this.currentPhase = "hello!"
+      },
+      changeDeliverables() {
+        this.currentDeliverables = ["1", "2", "3"]
+      }
+    },
+    computed: {
+      setDefaultHeader: function() {
+        return this.phases[0].name
+      }
     },
     data () {
       return {
