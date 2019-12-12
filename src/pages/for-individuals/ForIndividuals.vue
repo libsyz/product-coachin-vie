@@ -11,7 +11,7 @@
                    :headerText="card.headerText"
                    :bodyText="card.bodyText"/>
     </div>
-    <div class="workshops ">
+    <div class="workshops">
       <h2>Some of Our Workshops</h2>
 
       <CardforIndividual v-for="workshop in workshops" :key="workshop.id"
@@ -119,6 +119,14 @@
 </script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: boarder-box;
+}
+.cards-container .card-product {
+  margin: 10px;
+}
 
 .cards-container {
   display: flex;
@@ -126,6 +134,9 @@
   padding: 80px 160px;
   background-color: #F0EFFF;
 
+}
+.workshops {
+  padding: 0px;
 }
 .workshopItem {
   display: inline-block;
@@ -137,11 +148,11 @@
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(3, 1fr);
-grid-column-gap: 10px;
-grid-row-gap: 10px;
+grid-column-gap: 0px;
+grid-row-gap: 5px;
 margin-top: 40px;
-padding-top: 80px;
-padding-left: 223px;
+
+padding: 80px 0 80px 223px;
 background: #F0EFFF;
 }
 
@@ -152,20 +163,19 @@ background: #F0EFFF;
 .div5 { grid-area: 3 / 1 / 4 / 2; }
 .div6 { grid-area: 3 / 2 / 4 / 4; }
 .div7 { grid-area: 1 / 3 / 3 / 4; 
-  /* position: absolute; */
-  width: 327px;
-  height: 230px;
-  /* left: 985px;
-  top: 2983px; */
+ 
+  width: 337px;
+  height: 220px;
   text-align: left;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+  padding: 5px 0 0 25px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 30px;
+  
 
   color: #000000;
 }
@@ -193,7 +203,7 @@ background: #F0EFFF;
 
 }
 .info-column {
-  width: 381px;
+  width: 359px;
   height: 106px;
 
   background: #6C63FF;
@@ -213,6 +223,8 @@ background: #F0EFFF;
 
 #requestRect {
   width: 737px;
+  text-align: center;
+
 }
 
 

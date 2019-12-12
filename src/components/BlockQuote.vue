@@ -23,7 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 420px;
     color: #fff;
     background-color: #6C63FF;
   }
