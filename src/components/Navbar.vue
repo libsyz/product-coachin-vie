@@ -5,7 +5,8 @@
     <div class="nav-links">
       <router-link class="nav-link" to="/landing-page"> Home  </router-link>
       <router-link class="nav-link" to="/for-companies"> For Companies </router-link>
-      <p> About us </p>
+      <router-link class="nav-link" to="/for-individuals"> For Individuals </router-link>
+      <!-- <p> About us </p> --> 
       <Button label="Contact"/>
     </div>
 

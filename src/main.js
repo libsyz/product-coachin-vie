@@ -4,7 +4,7 @@ import App from './App.vue';
 
 import VueParticles from 'vue-particles'
 
-
+import ForIndividuals from './pages/for-individuals/ForIndividuals.vue'
 import ForCompanies from './pages/for-companies/ForCompanies.vue'
 import LandingPage from './pages/landing/LandingPage.vue'
 import SandboxPage from './pages/sandbox/SandboxPage.vue'
@@ -25,6 +25,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 
 const routes = [
+  { path: '/for-individuals', component: ForIndividuals, props: true  },
   { path: '/for-companies', component: ForCompanies, props: true  },
   { path: '/landing-page', component: LandingPage, props: true  },
   { path: '/sandbox', component: SandboxPage, props: true },
