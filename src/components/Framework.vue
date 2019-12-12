@@ -7,7 +7,7 @@
     :key="phase.id"
     @mouseenter="hover(phase, true); applyFilter($event)"
     @mouseleave="hover(phase, false); removeFilter($event)"
-    @click="changeHeader(); changeDeliverables()"
+    @click="changeHeader(phase.name); changeDeliverables(phase.phaseDetails)"
     :class="{ active: phase.hover }"
     >
     <img class="framework-phase-image"
@@ -25,7 +25,7 @@
     <div class="content-phase-deliverables">
       <ul>
         <li v-for="deliverable in currentDeliverables"
-            :key="deliverable.id"> {{ deliverable }}</li>
+            :key="deliverable.id"> {{ deliverable.detail }}</li>
       </ul>
     </div>
   </div>
@@ -55,7 +55,7 @@
         phase.hover = bool;
       },
       applyFilter(event) {
-        event.target.children[0].style.filter = 'invert(83%)' + 'sepia(82%)' + 'saturate(356%)' +  'hue-rotate(15deg)' + 'brightness(90%)' + 'contrast(89%)';
+        event.target.children[0].style.filter = 'invert(34%)' + 'sepia(30%)' + 'saturate(2565%)' +  'hue-rotate(218deg)' + 'brightness(114%)' + 'contrast(104%)';
       },
       removeFilter(event){
        event.target.children[0].style.filter = 'invert(100%)' + 'sepia(0%)' + 'saturate(7941%)' +  'hue-rotate(140deg)' + 'brightness(106%)' + 'contrast(102%)';
@@ -66,11 +66,11 @@
       setDeliverables(phase) {
         return phase.name;
       },
-      changeHeader() {
-        this.currentPhase = "hello!"
+      changeHeader(id) {
+        this.currentPhase = `${id}`
       },
-      changeDeliverables() {
-        this.currentDeliverables = ["1", "2", "3"]
+      changeDeliverables(array) {
+        this.currentDeliverables = array
       }
     },
     computed: {
@@ -175,7 +175,7 @@
 
 .framework-top {
   padding: 25px 30px;
-  background-color: rgb(30, 30, 30);
+  background-color: #282828;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -189,7 +189,9 @@
   align-items: top;
   text-align: left;
   margin-right: 40px;
+  cursor: pointer;
 }
+
 .framework-phase-image {
   height: 50px;
   margin-right: 10px;
@@ -197,18 +199,23 @@
 }
 
 .active {
-  color: #bada55;
+  color: #6C63FF;
 }
 
 .framework-phase-name {
   margin-top: 0px;
   margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
 .framework-phase-duration {
   margin-top: 0px;
   margin-bottom: 0px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .framework-content {
