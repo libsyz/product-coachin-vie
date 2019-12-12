@@ -7,7 +7,6 @@
     :key="phase.id"
     @mouseenter="hover(phase, true); applyFilter($event)"
     @mouseleave="hover(phase, false); removeFilter($event)"
-    @click="setPhase(phase)"
     :class="{ active: phase.hover }"
     >
     <img class="framework-phase-image"
@@ -37,14 +36,29 @@
     },
     props: {
       currentPhase: String,
-      currentPhaseDetails: Array,
-      currentPhaseDeliverables: Array,
-      currentPhaseImage: String
+    },
+    methods: {
+      hover(phase, bool) {
+        phase.hover = bool;
+      },
+      applyFilter(event) {
+        event.target.children[0].style.filter = 'invert(83%)' + 'sepia(82%)' + 'saturate(356%)' +  'hue-rotate(15deg)' + 'brightness(90%)' + 'contrast(89%)';
+      },
+      removeFilter(event){
+       event.target.children[0].style.filter = 'invert(100%)' + 'sepia(0%)' + 'saturate(7941%)' +  'hue-rotate(140deg)' + 'brightness(106%)' + 'contrast(102%)';
+      },
+      setPhase() {
+        return 4;
+      },
+      setDeliverables() {
+        return 4;
+    }
+
     },
     data () {
       return {
         phases: [
-        {
+                  {
           imgUrl: require("./../assets/framework-component/change.svg"),
           name: "Discover",
           duration: "1 week",
@@ -119,39 +133,11 @@
           {deliverable: "One of the things we deliver is here"},
           {deliverable: "another of the things we deliver, really cool"},
           {deliverable: "this is a super cool thing we deliver bro"},
-          {deliverable: "What the hell, we also will deliver this."}
-          ]
-        }
-        ]
-      }
-    },
-    methods: {
-      hover(phase, bool) {
-        phase.hover = bool;
-      },
-      applyFilter(event) {
-        event.target.children[0].style.filter = 'invert(83%)' + 'sepia(82%)' + 'saturate(356%)' +  'hue-rotate(15deg)' + 'brightness(90%)' + 'contrast(89%)';
-      },
-      removeFilter(event){
-       event.target.children[0].style.filter = 'invert(100%)' + 'sepia(0%)' + 'saturate(7941%)' +  'hue-rotate(140deg)' + 'brightness(106%)' + 'contrast(102%)';
-     },
-     setPhaseHeader(phases,id = 0){
-      return phases[id].phaseDescription
-    },
-    setPhase(id) {
-      alert(id);
+          {deliverable: "What the hell, we also will deliver this."} ]
+        }]
     }
-  },
-   computed: {
-    setPhaseX: function() {
-      return "4"
-    },
-    setDeliverables: function() {
-      return [4]
-    }
-   }
+  }
 }
-
 
 </script>
 
