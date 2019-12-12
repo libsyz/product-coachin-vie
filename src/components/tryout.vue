@@ -1,7 +1,7 @@
 <template>
 
   <section>
-    <h1> {{ name }}</h1>
+    <h1 @click="rename()"> {{ namePlaceholder }}</h1>
   </section>
 
 </template>
@@ -11,26 +11,34 @@
   export default  {
     name: 'tryout',
     props: {
-      name: String
+      name: {
+        type: String,
+        default: "Whatup"
+      }
     },
     mounted () {
-      this.name = this.hello;
     },
     data () {
       return {
+        activated: true,
+        namePlaceholder: "Placeholdin",
+        listen: "This is something important"
       }
     },
     methods: {
-      calculate() {
-        return this.data();
+      rename() {
+        if (this.activated) {
+          this.namePlaceholder = this.listen
+        }
+        else {
+          this.namePlaceholder = "Placeholdin "
+        }
+        this.activated = !this.activated
+
       }
 
     },
     computed: {
-      hello: function(){
-        return "hello!"
-      }
-
     }
 }
 

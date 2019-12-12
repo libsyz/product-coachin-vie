@@ -7,7 +7,7 @@
     :key="phase.id"
     @mouseenter="hover(phase, true); applyFilter($event)"
     @mouseleave="hover(phase, false); removeFilter($event)"
-    @click="changeHeader(phase.name); changeDeliverables(phase.phaseDetails)"
+    @click="setPhase(phase.id)"
     :class="{ active: phase.hover }"
     >
     <img class="framework-phase-image"
@@ -15,19 +15,31 @@
 
     alt="">
       <div class="framework-phase-details">
-        <p class="framework-phase-name">{{ phase.name }}</p>
-        <p class="framework-phase-duration">{{ phase.duration }}</p>
+        <p class="framework-phase-name"> {{ phase.name }}</p>
+        <p class="framework-phase-duration"> {{ phase.duration }}</p>
       </div>
     </div>
   </div>
-  <div class="framework-content">
-    <div class="content-phase-description">{{ currentPhase }}</div>
-    <div class="content-phase-deliverables">
-      <ul>
-        <li v-for="deliverable in currentDeliverables"
-            :key="deliverable.id"> {{ deliverable.detail }}</li>
+  <div class="framework-content-wrapper">
+    <div class="content-description">
+      <div class="content-header">
+        {{ currentPhase.name }}
+      </div>
+      <div class="content-details">
+        <ul>
+          <li v-for="detail in currentPhase.details"
+              :key="detail.id"> {{ detail.content }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-deliverables">
+      <div class="deliverables-header"> Key Deliverables </div>
+      <ul class="deliverables-details">
+        <li v-for="deliverable in currentPhase.deliverables"
+            :key="deliverable.id"> {{ deliverable.content }}</li>
       </ul>
     </div>
+    <img class="content-illustration" :src="currentPhase.illustration" alt="">
   </div>
 </div>
 </template>
@@ -37,18 +49,7 @@
   export default  {
     name: 'framework',
     mounted() {
-    },
-    props: {
-      currentPhase:
-      {
-        type: String,
-        default: "The Value"
-      },
-      currentDeliverables:
-      {
-        type: Array,
-        default: () => ["This is a value", "This is another value"]
-      }
+      this.setPhase();
     },
     methods: {
       hover(phase, bool) {
@@ -60,104 +61,107 @@
       removeFilter(event){
        event.target.children[0].style.filter = 'invert(100%)' + 'sepia(0%)' + 'saturate(7941%)' +  'hue-rotate(140deg)' + 'brightness(106%)' + 'contrast(102%)';
       },
-      setPhase(phase) {
-        return phase.name;
-      },
-      setDeliverables(phase) {
-        return phase.name;
-      },
-      changeHeader(id) {
-        this.currentPhase = `${id}`
-      },
-      changeDeliverables(array) {
-        this.currentDeliverables = array
-      }
-    },
-    computed: {
-      setDefaultHeader: function() {
-        return this.phases[0].name
+      setPhase(id = 0){
+        this.currentPhase = this.phases[id];
       }
     },
     data () {
       return {
-        phases: [
-                  {
+        currentPhase: {
+          imgUrl: '',
+          name: '',
+          duration: '',
+          hover: '',
+          description: '',
+          details: [],
+          deliverables: [],
+          illustraton: ''
+        },
+        phases: [{
+          id: 0,
           imgUrl: require("./../assets/framework-component/change.svg"),
           name: "Discover",
           duration: "1 week",
           hover: false,
-          phaseDescription: "During this phase we do this and that. Some of the things that we do include",
-          phaseDetails: [
-          {detail: "this is one of the things that we do"},
-          {detail: "this is another of the things that we do"},
-          {detail: "and don't forget this other thing"},
-          {detail: "and finally this one. This one is key!"}
+          description: "During this phase we do this and that. Some of the things that we do include",
+          details: [
+          {content: "1 this is one of the things that we do"},
+          {content: "1this is another of the things that we do"},
+          {content: "1 and don't forget this other thing"},
+          {content: "1 and finally this one. This one is key!"}
           ],
-          phaseDeliverables: [
-          {deliverable: "One of the things we deliver is here"},
-          {deliverable: "another of the things we deliver, really cool"},
-          {deliverable: "this is a super cool thing we deliver bro"},
-          {deliverable: "What the hell, we also will deliver this."}
-          ]
-
+          deliverables: [
+          {content: "1 One of the things we deliver is here"},
+          {content: "1 another of the things we deliver, really cool"},
+          {content: "1 this is a super cool thing we deliver bro"},
+          {content: "1 What the hell, we also will deliver this."}
+          ],
+          illustration: require('./../assets/landing/assess.svg')
         },
         {
+          id: 1,
           imgUrl: require("./../assets/framework-component/compass.svg"),
           name: "Design",
           duration: "1 week",
           hover: false,
-          phaseDescription: "During this phase we do this and that. Some of the things that we do include",
-          phaseDetails: [
-          {detail: "this is one of the things that we do"},
-          {detail: "this is another of the things that we do"},
-          {detail: "and don't forget this other thing"},
-          {detail: "and finally this one. This one is key!"}
+          description: "During this phase we do this and that. Some of the things that we do include",
+          details: [
+          {content: "2 this is one of the things that we do"},
+          {content: "2 this is another of the things that we do"},
+          {content: "2 and don't forget this other thing"},
+          {content: "2 and finally this one. This one is key!"}
           ],
-          phaseDeliverables: [
-          {deliverable: "One of the things we deliver is here"},
-          {deliverable: "another of the things we deliver, really cool"},
-          {deliverable: "this is a super cool thing we deliver bro"},
-          {deliverable: "What the hell, we also will deliver this."}
-          ]
+          deliverables: [
+          {content: "2 One of the things we deliver is here"},
+          {content: "2 another of the things we deliver, really cool"},
+          {content: "2 this is a super cool thing we deliver bro"},
+          {content: "2 What the hell, we also will deliver this."}
+          ],
+          illustration: require('./../assets/landing/boost.svg')
 
         },
         {
+          id: 2,
           imgUrl: require("./../assets/framework-component/sketch.svg"),
           name: "Develop",
           duration: "1 week",
           hover: false,
-          phaseDescription: "During this phase we do this and that. Some of the things that we do include",
-          phaseDetails: [
-          {detail: "this is one of the things that we do"},
-          {detail: "this is another of the things that we do"},
-          {detail: "and don't forget this other thing"},
-          {detail: "and finally this one. This one is key!"}
+          description: "During this phase we do this and that. Some of the things that we do include",
+          details: [
+          {content: "3 this is one of the things that we do"},
+          {content: "3 this is another of the things that we do"},
+          {content: "3 and don't forget this other thing"},
+          {content: "3 and finally this one. This one is key!"}
           ],
-          phaseDeliverables: [
-          {deliverable: "One of the things we deliver is here"},
-          {deliverable: "another of the things we deliver, really cool"},
-          {deliverable: "this is a super cool thing we deliver bro"},
-          {deliverable: "What the hell, we also will deliver this."}
-          ]
+          deliverables: [
+          {content: "3 One of the things we deliver is here"},
+          {content: "3 another of the things we deliver, really cool"},
+          {content: "3 this is a super cool thing we deliver bro"},
+          {content: "3 What the hell, we also will deliver this."}
+          ],
+          illustration: require('./../assets/landing/enable.svg')
         },
         {
+          id: 3,
           imgUrl: require("./../assets/framework-component/spyglass.svg"),
           name: "Implement",
           duration: "1 week",
           hover: false,
-          phaseDescription: "During this phase we do this and that. Some of the things that we do include",
-          phaseDetails: [
-          {detail: "this is one of the things that we do"},
-          {detail: "this is another of the things that we do"},
-          {detail: "and don't forget this other thing"},
-          {detail: "and finally this one. This one is key!"}
+          description: "During this phase we do this and that. Some of the things that we do include",
+          details: [
+          {content: "4 this is one of the things that we do"},
+          {content: "4 this is another of the things that we do"},
+          {content: "4 and don't forget this other thing"},
+          {content: "4 and finally this one. This one is key!"}
           ],
-          phaseDeliverables: [
-          {deliverable: "One of the things we deliver is here"},
-          {deliverable: "another of the things we deliver, really cool"},
-          {deliverable: "this is a super cool thing we deliver bro"},
-          {deliverable: "What the hell, we also will deliver this."} ]
-        }]
+          deliverables: [
+          {content: "4 One of the things we deliver is here"},
+          {content: "4 another of the things we deliver, really cool"},
+          {content: "4 this is a super cool thing we deliver bro"},
+          {content: "4 What the hell, we also will deliver this."} ],
+          illustration: require('./../assets/landing/assess.svg')
+        }],
+
     }
   }
 }
@@ -218,12 +222,50 @@
   line-height: 16px;
 }
 
-.framework-content {
+.framework-content-wrapper {
+  padding-top: 40px;
   display: flex;
   justify-content: space-around;
   align-content: center;
   height: 300px;
   background-color: #fff;
+}
+
+.content-header {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content-details {
+  text-align: left;
+  line-height: 25px;
+}
+
+.deliverables-header {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.deliverables-details {
+  text-align: left;
+  line-height: 25px;
+  list-style: none;
+}
+
+.deliverables-details > li::before {
+  content: "\2713"; /* Unicode bullet symbol */
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.phase-description-header {
+  text-transform: uppercase;
+}
+
+.content-illustration {
+  padding-right: 40px;
+  padding-left: 40px;
+  height: 200px;
 }
 
 </style>
