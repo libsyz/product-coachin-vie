@@ -2,7 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue';
 
-import VueParticles from 'vue-particles'
+import VueParticles from 'vue-particles';
+import BootstrapVue from 'bootstrap-vue';
 
 import ForIndividuals from './pages/for-individuals/ForIndividuals.vue'
 import ForCompanies from './pages/for-companies/ForCompanies.vue'
@@ -16,8 +17,12 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 Vue.use(VueRouter)
 Vue.use(VueParticles)
+Vue.use(BootstrapVue)
 
 library.add(faFacebookSquare, faInstagram, faLinkedin );
 
