@@ -24,10 +24,10 @@
 
   .standard-card {
     width: 250px;
-    height: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 30px;
     border-radius: 3px;
   }

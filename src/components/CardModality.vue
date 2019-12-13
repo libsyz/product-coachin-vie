@@ -34,12 +34,11 @@
 
 .modality-card-outer {
   background-color: #fff;
-  width: 544px;
   border-radius: 4px;
   box-shadow: 0 15px 35px rgba(126,87,88,.1),
               0 5px 15px rgba(0,0,0,.07);
 
-  padding: 40px 40px;
+  padding: 40px 40px
 }
 
 .modality-card-header {
