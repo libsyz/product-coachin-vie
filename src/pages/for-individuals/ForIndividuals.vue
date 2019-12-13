@@ -27,7 +27,7 @@
       <div class="div5 info-column">Individual Coaching </div>
       <div class="div6 price-column" id="requestRect">Depending on request </div>
       <div class="div7 "> 
-        <h2>WHAT'S INCULDED</h2>
+        <h3>WHAT'S INCLUDED</h3>
         <ul class="dashed">
           <li>Certificate of Completion</li>
           <li>Lifetime access to our resource library</li>
@@ -50,8 +50,8 @@
       </div>
     </div>
     <StayInTouch class="contactUs stayInTouch" id="contactUs"
-      header="Ready to uplift your product teams?"
-      body="We offer free 1-day taster workshops. Contact us to know more"
+      header="Want to become a better product professional?"
+      body="Contact us if you like to know more"
       cta="Get in Touch"/>
     
   </section>
@@ -140,6 +140,28 @@
   margin: 0;
   padding: 0;
   box-sizing: boarder-box;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+h2 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 61px;
+}
+h3 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
 }
 .cards-container .card-product {
   margin: 10px;
@@ -214,7 +236,7 @@ ul.dashed > li:before {
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-left: 20px;
-  /* display: inline-block; */
+  display: inline-block;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -230,7 +252,7 @@ ul.dashed > li:before {
 .info-column {
   width: 359px;
   height: 106px;
-  /* display: inline-block; */
+  display: inline-block;
   background: #6C63FF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-left: 20px;
