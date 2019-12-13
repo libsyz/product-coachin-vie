@@ -6,7 +6,7 @@
       <router-link class="nav-link" to="/landing-page"> Home  </router-link>
       <router-link class="nav-link" to="/for-companies"> For Companies </router-link>
       <router-link class="nav-link" to="/for-individuals"> For Individuals </router-link>
-      <!-- <p> About us </p> --> 
+      <!-- <p> About us </p> -->
       <Button label="Contact"/>
     </div>
 
@@ -49,6 +49,10 @@ nav {
 
 p {
   cursor: pointer;
+}
+
+.contact {
+  margin-bottom: 0px;
 }
 
 .nav-link {
