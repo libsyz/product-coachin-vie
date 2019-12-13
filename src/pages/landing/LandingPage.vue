@@ -7,6 +7,7 @@
       subtitle= "We represent Product Management" />
     </section>
     <section class="for-companies-for-individuals">
+
       <CardModality v-for="card in cardsModalities"
       :key="card.id"
       :iconUrl="card.iconUrl"
@@ -32,6 +33,7 @@
     <section class="stay-in-touch">
       <StayInTouch/>
     </section>
+    <b-button variant="primary"> Hello there </b-button>
     </div>
 </template>
 
