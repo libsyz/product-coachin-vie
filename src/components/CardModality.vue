@@ -1,16 +1,16 @@
 
 <template>
-  <div class="card-outer">
-    <div class="card-header">
+  <div class="modality-card-outer">
+    <div class="modality-card-header">
       <img class="header-icon" :src="iconUrl" alt="image">
       <div class="header-text"> {{ headerText }}
         <span class="header-underline"> </span>
       </div>
     </div>
 
-    <div class="card-body">
-      <div class="body-text"> {{ bodyText }}</div>
-      <div class="body-cta"> {{ bodyCta }}</div>
+    <div class="modality-card-body">
+      <div class="card-body-text"> {{ bodyText }}</div>
+      <div class="card-body-cta"> {{ bodyCta }}</div>
     </div>
   </div>
 </template>
@@ -32,10 +32,8 @@
 
 <style scoped>
 
-.card-outer {
+.modality-card-outer {
   background-color: #fff;
-  max-height: 240px;
-  max-width: 444px;
   width: 544px;
   border-radius: 4px;
   box-shadow: 0 15px 35px rgba(126,87,88,.1),
@@ -44,7 +42,7 @@
   padding: 40px 40px;
 }
 
-.card-header {
+.modality-card-header {
   display: flex;
   justify-content: left;
   align-items: middle;
@@ -74,15 +72,15 @@
   width: 80%;
 }
 
-.body-text {
+.card-body-text {
   text-align: left;
   padding-bottom: 40px;
 }
 
-.body-cta {
+.card-body-cta {
   color: #fff;
   padding: 10px 15px;
-  max-width: 100px;
+  max-width: 150px;
   border-radius: 3px;
   background-color: #6C63FF;
   cursor: pointer;
