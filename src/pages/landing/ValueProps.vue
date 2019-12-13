@@ -3,9 +3,9 @@
   <div>
 
     <Card v-for="card in cards" :key="card.id"
-     :header="card.header"
-     :content="card.content"
-     :imgUrl="card.image"
+      :header="card.header"
+      :content="card.content"
+      :imgUrl="card.image"
      />
 
   </div>

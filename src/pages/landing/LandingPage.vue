@@ -33,7 +33,6 @@
     <section class="stay-in-touch">
       <StayInTouch/>
     </section>
-    <b-button variant="primary"> Hello there </b-button>
     </div>
 </template>
 
