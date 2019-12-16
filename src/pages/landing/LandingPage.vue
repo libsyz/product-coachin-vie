@@ -10,7 +10,8 @@
       <b-container class="bv-example-row">
         <b-row>
           <b-col v-for="card in cardsModalities"
-                 :key="card.id">
+                 :key="card.id"
+                 sm="6">
             <CardModality
               :iconUrl="card.iconUrl"
               :headerText="card.headerText"

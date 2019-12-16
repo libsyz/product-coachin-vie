@@ -2,7 +2,7 @@
 <template>
   <div class="container value-props">
     <div class="row align-top">
-      <div class="col-sm offset-sm-1"
+      <div class="col-sm-4"
           v-for="card in cards"
           :key="card.id">
             <Card

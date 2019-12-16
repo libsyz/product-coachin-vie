@@ -1,44 +1,47 @@
 
 <template>
-  <nav>
-    <Logo/>
-    <div class="nav-links">
-      <router-link class="nav-link" to="/landing-page"> Home  </router-link>
-      <router-link class="nav-link" to="/for-companies"> For Companies </router-link>
-      <router-link class="nav-link" to="/for-individuals"> For Individuals </router-link>
-      <!-- <p> About us </p> -->
-      <Button label="Contact"/>
-    </div>
+  <b-navbar toggleable="lg" class="navbar-main">
+    <b-navbar-brand href="/">
+      <Logo />
+    </b-navbar-brand>
 
-  </nav>
+    <b-navbar-toggle target="nav-collapse" class="mx-5"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item class="mx-5">
+          <router-link class="nav-link" to="/for-companies">For Companies</router-link>
+        </b-nav-item>
+        <b-nav-item>
+          <router-link class="nav-link" to="/for-individuals">For Individuals</router-link>
+        </b-nav-item>
+        <b-nav-item>
+          <router-link class="nav-link" to="/landing-page">About us</router-link>
+        </b-nav-item>
+        <b-button class="contact mx-5">Contact</b-button>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
 </template>
 
 <script>
-
-import Logo from './Logo.vue'
-import Button from './Button.vue'
+import Logo from "./Logo.vue";
 
 export default {
-  name: 'navbar',
+  name: "navbar",
   components: {
-    Logo,
-    Button
+    Logo
   }
-}
+};
 </script>
 
 <style scoped>
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.navbar-main {
   background-color: #282828;
-  height: 85px;
+  min-height: 85px;
 }
 
-.nav-links {
-  width: 700px;
+.nav-link {
   font-weight: normal;
   display: flex;
   align-items: center;
@@ -53,13 +56,11 @@ p {
 
 .contact {
   margin-bottom: 0px;
-}
-
-.nav-link {
-  text-decoration: none;
   color: #fff;
+  padding: 0px 20px;
+  background-color: #6c63ff;
+  border: none;
 }
-
 </style>
 
 
