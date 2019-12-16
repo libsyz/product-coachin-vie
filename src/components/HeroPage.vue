@@ -38,7 +38,7 @@
 
 .hero-page-wrapper {
   background-color: #F0EFFF;
-  height: 600px;
+  height: 80vh;
   display: flex;
   position: relative;
 }

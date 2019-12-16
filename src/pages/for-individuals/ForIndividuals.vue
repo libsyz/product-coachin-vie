@@ -1,24 +1,42 @@
 <template>
 
   <section class="for-individuals">
-    <HeroPage informationHeader="turbo charge your product career"
-        informationText="Take your product management skill to the next level with our workshops, courses and individual coaching packages."/>
-    <BlockQuote quote="At Mavericks we believe the next source of competitive advantage is product thinking. Those organizations that will be able to bring across the importance of being in constant search of value for customers across UX, Engineering, Sales and Customers Success will be in the best conditions to excel."/>
-    <div class="cards-container">
-      <CardProduct v-for="card in cards"
-        :key="card.id"
-        :imgUrl="card.imgUrl"
-        :headerText="card.headerText"
-        :bodyText="card.bodyText"/>
-    </div>
-    <div class="workshops">
-      <h2>Some of Our Workshops</h2>
-      <CardforIndividual v-for="workshop in workshops" 
-        :key="workshop.id"
-        :header="workshop.headerText"
-        :content="workshop.bodyText"
-        :imgUrl="workshop.imgUrl"/>
-    </div>
+    
+    <b-container fluid class="bv-example-row">
+      <b-row class="text-center">
+        <HeroPage informationHeader="turbo charge your product career"
+          informationText="Take your product management skill to the next level with our workshops, courses and individual coaching packages."/>
+      </b-row>
+      <b-row>
+        <BlockQuote quote="At Mavericks we believe the next source of competitive advantage is product thinking. Those organizations that will be able to bring across the importance of being in constant search of value for customers across UX, Engineering, Sales and Customers Success will be in the best conditions to excel."/>
+      </b-row>
+      <b-row>
+        <div class="cards-container">
+          <CardProduct 
+            v-for="card in cards"
+            :key="card.id"
+            :imgUrl="card.imgUrl"
+            :headerText="card.headerText"
+            :bodyText="card.bodyText"/>
+        </div>
+      </b-row>
+      <b-row>
+        <div class="workshops">
+          <h2>Some of Our Workshops</h2>
+          <CardforIndividual 
+            v-for="workshop in workshops" 
+            :key="workshop.id"
+            :header="workshop.headerText"
+            :content="workshop.bodyText"
+            :imgUrl="workshop.imgUrl"/>
+        </div>
+      </b-row>
+    </b-container>
+    
+    
+    <b-container fluid>
+      
+    </b-container>
     <div class="parent">
       <div class="div1 info-column">1-Day Workshops </div>
       <div class="div2 price-column">$200 SGD / PERSON </div>
@@ -189,8 +207,19 @@ grid-column-gap: 0px;
 grid-row-gap: 5px;
 margin-top: 40px;
 
-padding: 80px 0 80px 223px;
+padding: 10% 10% 10% 10%;
 background: #F0EFFF;
+}
+
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -5px;
+}
+ul.dashed > li:before {
+  content: "- ";
+  text-indent: -5px;
 }
 
 .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -201,8 +230,8 @@ background: #F0EFFF;
 .div6 { grid-area: 3 / 2 / 4 / 4; }
 .div7 { grid-area: 1 / 3 / 3 / 4; 
  
-  width: 337px;
-  height: 220px;
+  width: 80%;
+  /* height: 220px; */
   text-align: left;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -217,21 +246,10 @@ background: #F0EFFF;
   color: #000000;
 }
 
-ul.dashed {
-  list-style-type: none;
-}
-ul.dashed > li {
-  text-indent: -5px;
-}
-ul.dashed > li:before {
-  content: "- ";
-  text-indent: -5px;
-}
-
 .price-column {
   
-  width: 359px;
-  height: 106px;
+  width: 100%;
+  height: 100%;
 
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -250,8 +268,8 @@ ul.dashed > li:before {
 
 }
 .info-column {
-  width: 359px;
-  height: 106px;
+  width: 100%;
+  height: 100%;
   display: inline-block;
   background: #6C63FF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -268,7 +286,7 @@ ul.dashed > li:before {
 }
 
 #requestRect {
-  width: 737px;
+  width: 90%;
   text-align: center;
 
 }

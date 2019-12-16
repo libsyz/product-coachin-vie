@@ -26,8 +26,8 @@
 <style scoped>
 
   .card {
-    width: 350px;
-    height: 400px;
+    width: 40%;
+    height: 40%;
     display: inline-block;
     flex-direction: column;
     justify-content: center;

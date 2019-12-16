@@ -23,7 +23,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 420px;
+    height: 35rem;
+    /* width: 100%; */
     color: #fff;
     background-color: #6C63FF;
   }
