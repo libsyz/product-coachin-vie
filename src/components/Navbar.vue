@@ -1,24 +1,24 @@
 
 <template>
-  <b-navbar toggleable="lg" class="navbar-main">
+  <b-navbar toggleable="lg" class="navbar-dark navbar-main px-5">
     <b-navbar-brand href="/">
       <Logo />
     </b-navbar-brand>
 
-    <b-navbar-toggle target="nav-collapse" class="mx-5"></b-navbar-toggle>
+    <b-navbar-toggle target="nav-collapse" class="mx-5 color-white"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item class="mx-5">
-          <router-link class="nav-link" to="/for-companies">For Companies</router-link>
+        <b-nav-item class="ml-3">
+          <router-link class="nav-link text-white" to="/for-companies">For Companies</router-link>
         </b-nav-item>
-        <b-nav-item>
-          <router-link class="nav-link" to="/for-individuals">For Individuals</router-link>
+        <b-nav-item class="ml-3">
+          <router-link class="nav-link text-white" to="/for-individuals">For Individuals</router-link>
         </b-nav-item>
-        <b-nav-item>
-          <router-link class="nav-link" to="/landing-page">About us</router-link>
+        <b-nav-item class="ml-3">
+          <router-link class="nav-link text-white" to="/landing-page">About us</router-link>
         </b-nav-item>
-        <b-button class="contact mx-5">Contact</b-button>
+        <b-button class="contact ml-3">Contact</b-button>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -60,6 +60,11 @@ p {
   padding: 0px 20px;
   background-color: #6c63ff;
   border: none;
+}
+
+.contact:hover {
+  background-color: var(--indigo);
+  position: relative;
 }
 </style>
 
