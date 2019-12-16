@@ -211,7 +211,7 @@
 .maverick-linkedin {
   display: flex;
   justify-content: left;
-  align-items: center;
+  align-items: top;
 }
 
 .linkedin-logo {

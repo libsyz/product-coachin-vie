@@ -34,6 +34,7 @@ export default {
 
 body {
   margin: 0px;
+  line-height: auto;
 }
 
 .value-props {

@@ -1,7 +1,7 @@
 
 
 <template>
-  <div>
+  <div class="stay-in-touch">
     <h1> {{ header }} </h1>
     <p> {{ body }} </p>
     
@@ -75,8 +75,11 @@
   div {
     padding: 80px 0px;
   }
+
   form {
     padding-top: 20px;
+    box-shadow: 0 15px 35px rgba(126,87,88,.1),
+                0 5px 15px rgba(0,0,0,.07);
   }
 
   input {
@@ -87,8 +90,6 @@
     border-radius: 3px 0px 0px 3px;
     border: solid 1px #F0EFFF;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(126,87,88,.1),
-                0 5px 15px rgba(0,0,0,.07);
 
   }
 
@@ -103,6 +104,8 @@
     border-radius: 0px 3px 3px 0px;
     font-size: 16px;
     font-family: 'Open Sans';
+     box-shadow: 0 15px 35px rgba(126,87,88,.1),
+                0 5px 15px rgba(0,0,0,.07);
   }
   .form-elements {
     margin:0 auto;

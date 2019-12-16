@@ -2,9 +2,9 @@
 
 <template>
   <div class="testionials-landing">
-    <h1>
+    <h2 class="testimonials-header">
       They transformed their product teams with us
-    </h1>
+    </h2>
   </div>
 
 </template>
@@ -21,6 +21,12 @@
 
   .testimonials-landing {
     background-color: #F0EFFF;
+  }
+
+
+  .testimonials-header {
+    padding-top: 50px;
+    margin-bottom: 0px;
   }
 
 </style>

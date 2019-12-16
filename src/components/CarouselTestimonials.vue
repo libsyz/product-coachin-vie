@@ -1,21 +1,21 @@
 
 <template>
-  <div class="card-carousel-wrapper">
-    <div class="card-carousel--nav__left"
+  <div class="testimonials-card-carousel-wrapper">
+    <div class="testimonials-card-carousel--nav__left"
          @click="moveCarousel(-1)"
          :disabled="atHeadOfList">
     </div>
-    <div class="card-carousel">
-      <div class="card-carousel--overflow-container">
-        <div class="card-carousel-cards"
+    <div class="testimonials-card-carousel">
+      <div class="testimonials-card-carousel--overflow-container">
+        <div class="testimonials-card-carousel-cards"
              :style="{ transform: 'translateX' + '(' + currentOffset + 'px' + ')'}">
-          <div class="card-carousel--card"
+          <div class="testimonials-card-carousel--card"
                v-for="testimonial in items"
                :key="testimonial.id">
 
             <img :src="testimonial.imgUrl"/>
 
-            <div class="card-carousel--card--information">
+            <div class="testimonials-card-carousel--card--information">
               <p class="information-testimonial">
                 {{ testimonial.blurb }}
               </p>
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="card-carousel--nav__right"
+    <div class="testimonials-card-carousel--nav__right"
          @click="moveCarousel(1)"
          :disabled="atEndOfList"></div>
   </div>
@@ -40,7 +40,7 @@
 <script>
 
   export default {
-    name: "carousel-testimonial",
+    name: "testimonials-carousel-testimonial",
     data() {
       return {
         currentOffset: 0,
@@ -103,7 +103,7 @@
 
 <style scoped>
 
-.card-carousel-wrapper {
+.testimonials-card-carousel-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,16 +112,16 @@
   color: #666a73;
 }
 
-.card-carousel {
+.testimonials-card-carousel {
   display: flex;
   justify-content: center;
   width: 800px;
 }
 
-.card-carousel--overflow-container {
+.testimonials-card-carousel--overflow-container {
   overflow: hidden;
 }
-.card-carousel--nav__left, .card-carousel--nav__right {
+.testimonials-card-carousel--nav__left, .testimonials-card-carousel--nav__right {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -133,30 +133,31 @@
   margin: 0 20px;
   transition: transform 150ms linear;
 }
-.card-carousel--nav__left[disabled], .card-carousel--nav__right[disabled] {
+.testimonials-card-carousel--nav__left[disabled], .testimonials-card-carousel--nav__right[disabled] {
   opacity: 0.2;
   border-color: black;
 }
-.card-carousel--nav__left {
+.testimonials-card-carousel--nav__left {
   transform: rotate(-135deg);
 }
-.card-carousel--nav__left:active {
+.testimonials-card-carousel--nav__left:active {
   transform: rotate(-135deg) scale(0.9);
 }
-.card-carousel--nav__right {
+.testimonials-card-carousel--nav__right {
   transform: rotate(45deg);
 }
-.card-carousel--nav__right:active {
+.testimonials-card-carousel--nav__right:active {
   transform: rotate(45deg) scale(0.9);
 }
 
-.card-carousel-cards {
+.testimonials-card-carousel-cards {
   display: flex;
   transition: transform 150ms ease-out;
   transform: translatex(0px);
+  padding-bottom: 40px;
 }
 
-.card-carousel--card {
+.testimonials-card-carousel--card {
   display: flex;
   min-width: 600px;
   margin: 0 10px;
@@ -169,39 +170,36 @@
   z-index: 3;
   margin-bottom: 2px;
 }
-.card-carousel--card:first-child {
+.testimonials-card-carousel--card:first-child {
   margin-left: 0;
 }
-.card-carousel--card:last-child {
+.testimonials-card-carousel--card:last-child {
   margin-right: 0;
 }
 
-
-.card-carousel--card--information {
+.testimonials-card-carousel--card--information {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
   text-align: left;
 }
 
-.information-testimonial {
+.testimonials-information-testimonial {
   font-style: italic;
   font-size: 16px;
 }
 
-.information-referrer {
+.testimonials-information-referrer {
   font-size: 12px;
 }
 
-
-.card-carousel--card img {
+.testimonials-card-carousel--card img {
   vertical-align: bottom;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   transition: opacity 150ms linear;
   user-select: none;
 }
-
 
 h1 {
   font-size: 3.6em;

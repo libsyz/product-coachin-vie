@@ -1,13 +1,16 @@
 
 <template>
-  <div>
-
-    <Card v-for="card in cards" :key="card.id"
-     :header="card.header"
-     :content="card.content"
-     :imgUrl="card.image"
-     />
-
+  <div class="container value-props">
+    <div class="row align-top">
+      <div class="col-sm-4"
+          v-for="card in cards"
+          :key="card.id">
+            <Card
+              :header="card.header"
+              :content="card.content"
+              :imgUrl="card.image" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -54,10 +57,6 @@
 
 <style scoped>
 
-  div {
-    display: flex;
-    justify-content: space-between;
-  }
 
   h1 {
     font-weight: bold;
@@ -72,6 +71,8 @@
     font-size: 30px;
     line-height: 41px;
   }
+
+
 
 
 </style>
