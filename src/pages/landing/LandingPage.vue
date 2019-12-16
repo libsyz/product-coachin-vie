@@ -7,13 +7,20 @@
       subtitle= "We represent Product Management" />
     </section>
     <section class="for-companies-for-individuals">
+      <b-container class="bv-example-row">
+        <b-row>
+          <b-col v-for="card in cardsModalities"
+                 :key="card.id"
+                 sm="6">
+            <CardModality
+              :iconUrl="card.iconUrl"
+              :headerText="card.headerText"
+              :bodyText="card.bodyText"
+              :bodyCta="card.bodyCta" />
+          </b-col>
+        </b-row>
+      </b-container>
 
-      <CardModality v-for="card in cardsModalities"
-      :key="card.id"
-      :iconUrl="card.iconUrl"
-      :headerText="card.headerText"
-      :bodyText="card.bodyText"
-      :bodyCta="card.bodyCta" />
     </section>
     <section class="testimonials">
       <TestimonialsLanding/>
@@ -33,7 +40,6 @@
     <section class="stay-in-touch">
       <StayInTouch/>
     </section>
-    <b-button variant="primary"> Hello there </b-button>
     </div>
 </template>
 

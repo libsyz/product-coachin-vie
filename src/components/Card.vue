@@ -1,7 +1,7 @@
 
 <template>
-  <div class='card'>
-    <h2> {{ header }}</h2>
+  <div class='standard-card'>
+    <h2 class="standard-card-header"> {{ header }}</h2>
     <img :src="imgUrl" alt="Why not rendering">
     <p> {{ content }}</p>
   </div>
@@ -22,18 +22,19 @@
 
 <style scoped>
 
-  .card {
+  .standard-card {
     width: 250px;
-    height: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 30px;
     border-radius: 3px;
   }
 
-  h2 {
+  .standard-card-header {
     text-transform: uppercase;
+    font-weight: bold;
     padding-bottom: 30px;
   }
 

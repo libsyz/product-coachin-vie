@@ -22,9 +22,8 @@
 <style scoped>
 
   div {
-    height: 300px;
+    padding: 40px 0px;
   }
-
   form {
     padding-top: 20px;
   }
