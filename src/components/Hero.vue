@@ -2,24 +2,22 @@
 <template>
   <div class="main">
     <div class="shader">
-      <h1> Product Coaching Done Right </h1>
-      <h3> We bring the cutting edge product management practices, tools and frameworks to your organization </h3>
+      <h1>Product Coaching Done Right</h1>
+      <h3>We bring the cutting edge product management practices, tools and frameworks to your organization</h3>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-  name: 'hero'
-}
-
+export default {
+  name: "hero"
+};
 </script>
 
 <style scoped>
-
 .main {
   height: 100vh;
-  background-image: url('https://images.unsplash.com/photo-1557734864-c78b6dfef1b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1191&q=80');
+  background-image: url("https://images.unsplash.com/photo-1557734864-c78b6dfef1b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1191&q=80");
   background-size: cover;
   color: #fff;
 }
@@ -52,4 +50,10 @@ h3 {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media (max-width: 576px) {
+  h3 {
+    margin-top: 50px;
+    padding: 0px 50px;
+  }
+}
 </style>
