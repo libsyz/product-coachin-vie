@@ -7,63 +7,56 @@
         <span class="text-underline"></span>
       </div>
 
-      <div class="content-body">
-        {{ bodyText }}
-      </div>
+      <div class="content-body">{{ bodyText }}</div>
     </div>
     <div class="image">
       <div class="image-background">
-        <img :src="imageUrl" alt="">
+        <img :src="imageUrl" alt />
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
-
-  export default {
-    name: "benefit-left",
-    props: {
-      headerText: String,
-      bodyText: String,
-      imageUrl: String
-    }
+export default {
+  name: "benefit-left",
+  props: {
+    headerText: String,
+    bodyText: String,
+    imageUrl: String
   }
-
+};
 </script>
 
 
 <style scoped>
-
- .benefit-wrapper {
+.benefit-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 60px 40px;
- }
+}
 
-
- .image-background {
+.image-background {
   width: 400px;
-  background: #F0EFFF;
+  background: #f0efff;
   border-radius: 4px;
- }
+}
 
- .content {
+.content {
   display: flex;
   flex-direction: column;
   width: 400px;
- }
+}
 
- .content-header {
+.content-header {
   position: relative;
   padding-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
- }
+}
 
- .text-underline {
+.text-underline {
   position: absolute;
   width: 20%;
   max-height: 1px;
@@ -76,8 +69,22 @@
   padding-top: 20px;
 }
 
- img {
+img {
   height: 400px;
- }
+}
 
+@media (max-width: 572px) {
+  .benefit-wrapper {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .image-background {
+    overflow: hidden;
+  }
+
+  .content {
+    margin-bottom: 30px;
+  }
+}
 </style>
