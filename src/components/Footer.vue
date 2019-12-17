@@ -94,6 +94,10 @@ export default {
   cursor: pointer;
 }
 
+li:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 576px) {
   .footer {
     padding: 60px 80px;
