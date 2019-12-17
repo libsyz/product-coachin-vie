@@ -26,11 +26,11 @@
 
     <div class="footer-right">
       <ul class="website-sections">
-        <li>services</li>
-        <li>for individuals</li>
-        <li> for companies </li>
-        <li> blog </li>
-        <li> about us </li>
+        <li> <a href="#"> services </a></li> 
+        <li>  <a href="/for-individuals">  For individuals </a> </li> 
+        <li>  <a href="/for-companies"> for companies </a></li> 
+        <li> <a href="#"> Blog </a></li> 
+        <li> <a href="#"> About us </a></li> 
       </ul>
     </div>
   </div>
@@ -79,6 +79,11 @@ export default {
   padding-inline-start: 0px;
   line-height: 25px;
   cursor: pointer;
+}
+
+li > a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .company-social {
