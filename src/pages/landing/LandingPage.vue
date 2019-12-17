@@ -124,7 +124,8 @@ export default {
 @media (max-width: 572px) {
   .for-companies-for-individuals,
   .value-props,
-  .join-our-events {
+  .join-our-events,
+  .stay-in-touch {
     padding: 60px 10px;
   }
 }
