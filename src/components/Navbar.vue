@@ -18,7 +18,9 @@
         <b-nav-item class="ml-3">
           <router-link class="nav-link text-white" to="/landing-page">About us</router-link>
         </b-nav-item>
-        <b-button class="contact ml-3">Contact</b-button>
+        <b-nav-item class="ml-3">
+          <b-button class="contact py-2">Contact</b-button>
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
