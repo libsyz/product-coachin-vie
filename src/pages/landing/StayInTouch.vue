@@ -36,6 +36,10 @@ input {
   box-shadow: 0 15px 35px rgba(126, 87, 88, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
+input:focus {
+  outline: solid 1px #f0efff;
+}
+
 button {
   padding: 10px 15px;
   height: 60px;
