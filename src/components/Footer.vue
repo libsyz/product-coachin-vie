@@ -38,65 +38,73 @@
 </template>
 
 <script>
-
-  export default  {
-    name: 'footer'
-  }
-
-
+export default {
+  name: "footer"
+};
 </script>
 
 <style scoped>
+.footer {
+  padding: 60px 250px;
+  background-color: #141414;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  margin: 0px;
+}
 
+.company-info {
+  text-align: left;
+}
+
+.copyright {
+  font-weight: bold;
+}
+
+.address {
+  list-style-type: none;
+  padding-inline-start: 0px;
+  line-height: 20px;
+}
+
+.footer-right {
+  text-transform: uppercase;
+  text-align: left;
+  list-style-type: none;
+}
+
+.website-sections {
+  list-style-type: none;
+  padding-inline-start: 0px;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.company-social {
+  text-align: left;
+  font-size: 25px;
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.company-social-logo {
+  display: inline;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
   .footer {
-    padding: 60px 250px;
-    background-color: #141414;
-    color: #fff;
-    display: flex;
-    justify-content: space-around;
-    align-items: top;
-    margin: 0px;
-  }
-
-  .company-info {
-    text-align: left;
-  }
-
-  .copyright {
-    font-weight: bold;
-  }
-
-  .address {
-    list-style-type: none;
-    padding-inline-start: 0px;
-    line-height: 20px;
+    padding: 60px 80px;
+    flex-direction: column-reverse;
   }
 
   .footer-right {
-    text-transform: uppercase;
-    text-align: left;
-    list-style-type: none;
+    margin-bottom: 30px;
   }
-
-  .website-sections {
-    list-style-type: none;
-    padding-inline-start: 0px;
-    line-height: 25px;
-    cursor: pointer;
+  li {
+    margin-bottom: 10px;
   }
-
-
-  .company-social {
-    text-align: left;
-    font-size: 25px;
-    list-style-type: none;
-    padding-inline-start: 0px;
-  }
-
-  .company-social-logo {
-    display: inline;
-    margin-right: 15px;
-    cursor: pointer;
-  }
-
+}
 </style>
