@@ -39,7 +39,14 @@
               0 5px 15px rgba(0,0,0,.07);
 
   padding: 40px 40px;
+  transition: all 0.4s ease
   }
+
+.card-product:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 55px rgba(126,87,88,.1),
+              0 5px 55px rgba(0,0,0,.07);
+}
 
 .card-header {
   background-color: #fff;

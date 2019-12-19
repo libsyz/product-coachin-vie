@@ -96,7 +96,7 @@
           {content: "1 this is a super cool thing we deliver bro"},
           {content: "1 What the hell, we also will deliver this."}
           ],
-          illustration: require('./../assets/landing/assess.svg')
+          illustration: require('./../assets/framework-component/discover-illustration.svg')
         },
         {
           id: 1,
@@ -117,7 +117,7 @@
           {content: "2 this is a super cool thing we deliver bro"},
           {content: "2 What the hell, we also will deliver this."}
           ],
-          illustration: require('./../assets/landing/boost.svg')
+          illustration: require('./../assets/framework-component/design-illustration.svg')
 
         },
         {
@@ -139,7 +139,7 @@
           {content: "3 this is a super cool thing we deliver bro"},
           {content: "3 What the hell, we also will deliver this."}
           ],
-          illustration: require('./../assets/landing/enable.svg')
+          illustration: require('./../assets/framework-component/develop-illustration.svg')
         },
         {
           id: 3,
@@ -159,7 +159,7 @@
           {content: "4 another of the things we deliver, really cool"},
           {content: "4 this is a super cool thing we deliver bro"},
           {content: "4 What the hell, we also will deliver this."} ],
-          illustration: require('./../assets/landing/assess.svg')
+          illustration: require('./../assets/framework-component/implement-illustration.svg')
         }],
 
     }
