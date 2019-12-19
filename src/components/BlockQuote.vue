@@ -23,7 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35rem;
+    min-height: 23rem;
     /* width: 100%; */
     color: #fff;
     background-color: #6C63FF;
