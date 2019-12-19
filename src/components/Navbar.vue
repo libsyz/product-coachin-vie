@@ -16,7 +16,7 @@
           <router-link class="nav-link text-white" to="/for-individuals">For Individuals</router-link>
         </b-nav-item>
         <b-nav-item class="ml-3">
-          <router-link class="nav-link text-white" to="/landing-page">About us</router-link>
+          <router-link class="nav-link text-white" to="/about-us">About us</router-link>
         </b-nav-item>
         <b-nav-item class="ml-3">
           <b-button class="contact py-2">Contact</b-button>
