@@ -1,13 +1,11 @@
 <template>
-  <b-col >
-    <div class="card-product @media"  >
+    <div class="card-product"  >
+      <img :src="imgUrl" alt="">
       <div class="card-header"> {{ headerText }}
         <span class="header-underline"> </span>
       </div>
-      <img :src="imgUrl" alt="">
       <p class="card-body"> {{ bodyText }}</p>
     </div>
-  </b-col>
 </template>
 
 <script>
@@ -32,19 +30,19 @@
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
-  height: 30rem;
-  width: 23rem;
-  
-  margin: 0.5rem 0rem; 
+  min-height: 30rem;
+  max-width: 23rem;
+
+  margin: 0.5rem 0rem;
   border-radius: 0.4rem;
   box-shadow: 0 15px 35px rgba(126,87,88,.1),
               0 5px 15px rgba(0,0,0,.07);
-  
+
   padding: 40px 40px;
   }
 
 .card-header {
-  background-color: #fff; 
+  background-color: #fff;
   border-bottom: none;
   position: relative;
   text-transform: uppercase;
@@ -66,12 +64,12 @@
   img {
     height: 5rem;
     width: 5rem;
-    
+
   }
 
   .card-body {
     font-size: 1.25rem;
   }
 
-  
+
 </style>

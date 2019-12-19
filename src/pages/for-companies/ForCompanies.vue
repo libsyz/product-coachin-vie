@@ -4,22 +4,36 @@
     <HeroPage informationHeader="take your product team to the next level"
               informationText="We are your ultimate solution to the most difficult product challenges you can imagine"/>
     <BlockQuote quote="We are an enthusiastic group of product people ding the best work we can. We want to disrupt hte product industry and take it to the next level. We want to bring digitialization to your indsutry and solve all the difficult problems that are stopping you from scaling your business."/>
-    <div class="cards-container">
-      <CardProduct v-for="card in cards"
-                   :key="card.id"
-                   :imgUrl="card.imgUrl"
-                   :headerText="card.headerText"
-                   :bodyText="card.bodyText"/>
-    </div>
+    <section class="cards-container">
+      <b-container fluid>
+        <b-row>
+          <b-col v-for="card in cards"
+                 :key="card.id"
+                 col="12"
+                 sm="4">
+            <div class="card-wrapper">
+            <CardProduct
+                :imgUrl="card.imgUrl"
+                :headerText="card.headerText"
+                :bodyText="card.bodyText"/>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
 
-
+  <section class="framework">
+    <h1> This is a typical engagement </h1>
+    <Framework/>
+  </section>
+  <section class="success-stories">
+    <h1> Our Success Stories </h1>
+    <CarouselCaseStudies/>
+  </section>
     <StayInTouch header="Ready to uplift your product teams?"
                  body="We offer free 1-day taster workshops. Contact us to know more"
                  cta="Get in Touch"/>
-    <section class="mavericks-team">
-      <h1> Our Success Stories </h1>
-      <CarouselCaseStudies/>
-    </section>
+
   </section>
 
 
@@ -32,6 +46,7 @@
   import CardProduct from './../../components/CardProduct.vue'
   import StayInTouch from './../../components/StayInTouch.vue'
   import CarouselCaseStudies from './../../components/CarouselCaseStudies.vue'
+  import Framework from './../../components/Framework.vue'
 
   export default  {
     name: 'for-companies',
@@ -40,7 +55,8 @@
       BlockQuote,
       CardProduct,
       StayInTouch,
-      CarouselCaseStudies
+      CarouselCaseStudies,
+      Framework
     },
     data () {
       return {
@@ -71,11 +87,13 @@
 <style scoped>
 
 .cards-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 80px 160px;
+  padding: 80px 200px;
   background-color: #F0EFFF;
+}
 
+.card-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 </style>
