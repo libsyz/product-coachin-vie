@@ -13,7 +13,6 @@
 
       <div class="form-elements">
 
-
         <fieldset class="pure-group">
           <label class="input-label" for="email">
             <input class="input-form" id="email" name="email" type="email" value=""
