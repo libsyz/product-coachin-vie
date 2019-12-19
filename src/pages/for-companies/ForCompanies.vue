@@ -21,16 +21,23 @@
         </b-row>
       </b-container>
     </section>
-
-  <section class="framework">
-    <h1> A Coaching Engagement With Us </h1>
-    <Framework/>
-  </section>
   <section class="success-stories">
     <h1> Our Success Stories </h1>
     <CarouselCaseStudies/>
   </section>
-    <StayInTouch header="Ready to uplift your product teams?"
+  <section class="framework">
+    <h1> A Coaching Engagement With Us </h1>
+    <Framework/>
+  </section>
+  <section class="our-workshops">
+    <h1> A Workshop With Us </h1>
+    <CarouselWorkshops/>
+  </section>
+  <section class="client-logos">
+    <h1> They trust us </h1>
+    <CompanyLogos/>
+  </section>
+  <StayInTouch header="Ready to uplift your product teams?"
                  body="We offer free 1-day taster workshops. Contact us to know more"
                  cta="Get in Touch"/>
 
@@ -46,7 +53,9 @@
   import CardProduct from './../../components/CardProduct.vue'
   import StayInTouch from './../../components/StayInTouch.vue'
   import CarouselCaseStudies from './../../components/CarouselCaseStudies.vue'
+  import CarouselWorkshops from './../../components/CarouselWorkshops.vue'
   import Framework from './../../components/Framework.vue'
+  import CompanyLogos from '../../components/CompanyLogos.vue'
 
   export default  {
     name: 'for-companies',
@@ -56,7 +65,9 @@
       CardProduct,
       StayInTouch,
       CarouselCaseStudies,
-      Framework
+      CarouselWorkshops,
+      Framework,
+      CompanyLogos
     },
     data () {
       return {
@@ -86,6 +97,10 @@
 
 <style scoped>
 
+.success-stories {
+  padding-top: 40px;
+}
+
 .cards-container {
   padding: 80px 200px;
   background-color: #F0EFFF;
@@ -95,7 +110,6 @@
   padding: 80px 400px;
 }
 
-
 .framework > h1 {
   padding-bottom: 40px;
 }
@@ -103,6 +117,15 @@
 .card-wrapper {
   display: flex;
   justify-content: center;
+}
+
+.client-logos {
+  padding: 80px 0px;
+  background-color: #F0EFFF;
+}
+
+.client-logos > h1 {
+  padding-bottom: 40px;
 }
 
 @media(max-width: 922px) {
