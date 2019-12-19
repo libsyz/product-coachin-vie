@@ -1,18 +1,20 @@
 <template>
 
   <section class="for-individuals">
-    
-    <b-container fluid class="bv-example-row">
-      <b-row class="text-center">
-        <HeroPage informationHeader="turbo charge your product career"
+    <HeroPage informationHeader="turbo charge your product career"
           informationText="Take your product management skill to the next level with our workshops, courses and individual coaching packages."/>
+
+    <b-container fluid>
+      <b-row class="text-center">
+        <!-- <HeroPage informationHeader="turbo charge your product career"
+          informationText="Take your product management skill to the next level with our workshops, courses and individual coaching packages."/> -->
       </b-row>
       <b-row>
         <BlockQuote quote="At Mavericks we believe the next source of competitive advantage is product thinking. Those organizations that will be able to bring across the importance of being in constant search of value for customers across UX, Engineering, Sales and Customers Success will be in the best conditions to excel."/>
       </b-row>
-      <b-row>
-        <div class="cards-container">
-          <CardProduct 
+      <b-row fluid >
+        <div class="cards-container col-12 ">
+          <CardProduct class="col-s-10 col-3"
             v-for="card in cards"
             :key="card.id"
             :imgUrl="card.imgUrl"
@@ -20,7 +22,7 @@
             :bodyText="card.bodyText"/>
         </div>
       </b-row>
-      <b-row>
+      <b-row fluid>
         <div class="workshops">
           <h2>Some of Our Workshops</h2>
           <CardforIndividual 
@@ -35,31 +37,32 @@
     
     
     <b-container fluid>
-      
+      <b-row >
+        <div class="parent">
+          <div class="div1 info-column">1-Day Workshops </div>
+          <div class="div2 price-column">$200 SGD / PERSON </div>
+          <div class="div3 info-column">Multi-Day Workshops </div>
+          <div class="div4 price-column">$150 SGD / PERSON </div>
+          <div class="div5 info-column">Individual Coaching </div>
+          <div class="div6 price-column" id="requestRect">Depending on request </div>
+          <div class="div7 "> 
+            <h3>WHAT'S INCLUDED</h3>
+            <ul class="dashed">
+              <li>Certificate of Completion</li>
+              <li>Lifetime access to our resource library</li>
+              <li>Life time access to our slack community</li>
+              <li>Lunch and Coffee Breaks! *important*</li>
+              <li>An Awesome Mavericks T-Shirt</li>
+            </ul>
+          </div>
+        </div>
+      </b-row>
     </b-container>
-    <div class="parent">
-      <div class="div1 info-column">1-Day Workshops </div>
-      <div class="div2 price-column">$200 SGD / PERSON </div>
-      <div class="div3 info-column">Multi-Day Workshops </div>
-      <div class="div4 price-column">$150 SGD / PERSON </div>
-      <div class="div5 info-column">Individual Coaching </div>
-      <div class="div6 price-column" id="requestRect">Depending on request </div>
-      <div class="div7 "> 
-        <h3>WHAT'S INCLUDED</h3>
-        <ul class="dashed">
-          <li>Certificate of Completion</li>
-          <li>Lifetime access to our resource library</li>
-          <li>Life time access to our slack community</li>
-          <li>Lunch and Coffee Breaks! *important*</li>
-          <li>An Awesome Mavericks T-Shirt</li>
-        </ul>
-      </div>
-    </div>
+    
     <div class="promotion">
       <h2>Special Promotions</h2>
       <div class="cards-container" >
-        
-        <CardProduct 
+        <CardProduct class="col-s-10 col-3" 
           v-for="promotion in promotions"
           :key="promotion.id"
           :imgUrl="promotion.imgUrl"
@@ -181,19 +184,19 @@ h3 {
   display: flex;
   align-items: center;
 }
-.cards-container .card-product {
-  margin: 10px;
-}
+
 
 .cards-container {
   display: flex;
-  justify-content: space-between;
-  padding: 80px 160px;
+  /* width: 100%; */
+  justify-content: space-evenly;
+  padding: 5rem 2rem;
   background-color: #F0EFFF;
 
 }
+
 .workshops {
-  padding: 0px;
+  padding: 43px 0 66px 0;
 }
 .workshops h2{
   padding: 43px 0 43px 0;
@@ -206,7 +209,7 @@ grid-template-rows: repeat(3, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 5px;
 margin-top: 40px;
-
+width: 100%;
 padding: 10% 10% 10% 10%;
 background: #F0EFFF;
 }
@@ -248,13 +251,13 @@ ul.dashed > li:before {
 
 .price-column {
   
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-left: 20px;
-  display: inline-block;
+  display: flex;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -268,9 +271,9 @@ ul.dashed > li:before {
 
 }
 .info-column {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
+  /* width: 100%;
+  height: 100%; */
+  display: flex;
   background: #6C63FF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-left: 20px;
@@ -305,8 +308,36 @@ ul.dashed > li:before {
   background: #F0EFFF;
 }
 
-
-
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
 
 
 </style>

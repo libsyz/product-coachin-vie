@@ -77,9 +77,9 @@
   }
 
   form {
-    padding-top: 20px;
-    box-shadow: 0 15px 35px rgba(126,87,88,.1),
-                0 5px 15px rgba(0,0,0,.07);
+    /* padding-top: 20px; */
+    /* box-shadow: 0 15px 35px rgba(126,87,88,.1),
+                0 5px 15px rgba(0,0,0,.07); */
   }
 
   input {
