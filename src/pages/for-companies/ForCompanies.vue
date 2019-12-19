@@ -110,4 +110,11 @@
     padding: 80px 10px;
   }
 }
+
+
+@media(max-width: 572px) {
+  .cards-container {
+    padding: 80px 0px;
+  }
+}
 </style>
