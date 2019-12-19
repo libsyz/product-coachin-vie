@@ -56,8 +56,8 @@
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    background-color: #6c63ff;
-    color: #fff;
+    background-color: #F0EFFF;
+    color: #000;
   }
 
   .story-header {

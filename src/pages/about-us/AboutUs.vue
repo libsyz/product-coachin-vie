@@ -6,6 +6,10 @@
       <OurStory/>
     </section>
 
+    <section class="our-mission">
+      <BlockQuote quote="we are on a mission to change the world"/>
+    </section>
+
     <section class="our-difference">
       <h2> Our Difference</h2>
     </section>
@@ -35,6 +39,7 @@
   import CarouselTestimonials from './../../components/CarouselTestimonials.vue'
   import StayInTouch from './../../components/StayInTouch.vue'
   import OurStory from './../../components/OurStory.vue'
+  import BlockQuote from './../../components/BlockQuote.vue'
 
   export default  {
     name: 'about-us',
@@ -42,7 +47,8 @@
     components: {
       CarouselTestimonials,
       StayInTouch,
-      OurStory
+      OurStory,
+      BlockQuote
     },
     mounted () {
 
