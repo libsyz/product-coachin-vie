@@ -165,6 +165,8 @@
 .information-case-title {
   font-size: 16px;
   text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 15px;
 }
 
 .information-case-blurb {
@@ -180,14 +182,14 @@
 }
 
 
-/*.card-carousel--card img {
+.card-carousel--card img {
   vertical-align: bottom;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   transition: opacity 150ms linear;
   user-select: none;
   width: 40%;
-}*/
+}
 
 
 h1 {
@@ -196,6 +198,24 @@ h1 {
   text-align: center;
   margin-bottom: 0;
   color: #42b883;
+}
+
+
+@media (max-width: 570px) {
+  .card-carousel {
+    width: 300px;
+  }
+
+  .card-carousel--card {
+    flex-direction: column;
+    min-width: 300px;
+    height: auto;
+  }
+
+  .card-carousel-image--container {
+    min-height: 200px;
+    height:200px;
+  }
 }
 
 </style>
