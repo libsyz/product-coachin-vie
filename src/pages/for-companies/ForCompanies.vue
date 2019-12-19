@@ -23,7 +23,7 @@
     </section>
 
   <section class="framework">
-    <h1> This is a typical engagement </h1>
+    <h1> A Coaching Engagement With Us </h1>
     <Framework/>
   </section>
   <section class="success-stories">
@@ -91,9 +91,23 @@
   background-color: #F0EFFF;
 }
 
+.framework {
+  padding: 80px 400px;
+}
+
+
+.framework > h1 {
+  padding-bottom: 40px;
+}
+
 .card-wrapper {
   display: flex;
   justify-content: center;
 }
 
+@media(max-width: 922px) {
+  .framework {
+    padding: 80px 10px;
+  }
+}
 </style>

@@ -79,7 +79,7 @@
         },
         phases: [{
           id: 0,
-          imgUrl: require("./../assets/framework-component/change.svg"),
+          imgUrl: require("./../assets/framework-component/compass.svg"),
           name: "Discover",
           duration: "1 week",
           hover: false,
@@ -100,7 +100,7 @@
         },
         {
           id: 1,
-          imgUrl: require("./../assets/framework-component/compass.svg"),
+          imgUrl: require("./../assets/framework-component/change.svg"),
           name: "Design",
           duration: "1 week",
           hover: false,
@@ -173,8 +173,8 @@
 .framework-wrapper {
   min-width: 600px;
   border-radius: 4px;
-  box-shadow: 0 4px 15px 0 rgba(40, 44, 53, 0.06),
-              0 2px 2px 0 rgba(40, 44, 53, 0.08);
+  box-shadow: 0 15px 35px rgba(126,87,88,.1),
+              0 5px 15px rgba(0,0,0,.07);
 }
 
 .framework-top {
@@ -226,29 +226,49 @@
   padding-top: 40px;
   display: flex;
   justify-content: space-around;
-  align-content: center;
-  height: 300px;
+  align-items: top;
+  min-height: 300px;
   background-color: #fff;
 }
 
+.content-description {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1 33%;
+  padding-left: 20px;
+}
+
+.content-deliverables {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1 33%;
+}
+
 .content-header {
+  text-align: left;
   text-transform: uppercase;
   font-weight: bold;
+  padding-bottom: 15px;
+  padding-left: 20px;
 }
 
 .content-details {
   text-align: left;
-  line-height: 25px;
+  line-height: 30px;
 }
 
 .deliverables-header {
+  text-align: left;
   text-transform: uppercase;
   font-weight: bold;
+  padding-bottom: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
 }
 
 .deliverables-details {
   text-align: left;
-  line-height: 25px;
+  line-height: 30px;
   list-style: none;
 }
 
@@ -263,9 +283,53 @@
 }
 
 .content-illustration {
-  padding-right: 40px;
+  padding-right: 60px;
   padding-left: 40px;
-  height: 200px;
+  max-width: 300px;
+  flex-grow: 1 33%;
 }
+
+@media(max-width: 922px) {
+  .framework-content-wrapper {
+    padding-bottom: 30px;
+  }
+}
+
+@media(max-width: 576px) {
+  .framework-wrapper {
+    min-width: 300px;
+    max-width: 500px;
+  }
+
+  .framework-content-wrapper {
+    flex-direction: column;
+    padding: 30px 0px;
+  }
+
+  .framework-top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .framework-phase {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  .framework-phase-image {
+    height: 30px;
+  }
+
+  .framework-phase-duration {
+    display: none;
+  }
+  .content-illustration {
+    display: none;
+  }
+
+}
+
+
 
 </style>
