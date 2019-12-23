@@ -126,10 +126,17 @@ export default {
   methods: {
     moveCarousel(direction) {
       // Find a more elegant way to express the :style. consider using props to make it truly generic
+      let newPaginatorWidth;
+      if (document.body.offsetWidth < 672) {
+        newPaginatorWidth = 300;
+      } else {
+        newPaginatorWidth = this.paginationFactor;
+      }
+
       if (direction === 1 && !this.atEndOfList) {
-        this.currentOffset -= this.paginationFactor;
+        this.currentOffset -= newPaginatorWidth;
       } else if (direction === -1 && !this.atHeadOfList) {
-        this.currentOffset += this.paginationFactor;
+        this.currentOffset += newPaginatorWidth;
       }
     }
   }

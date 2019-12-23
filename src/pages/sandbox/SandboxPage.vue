@@ -1,20 +1,20 @@
 <template>
   <section class='sandbox'>
-    <Framework/>
+    <mapbox/>
   </section>
 
 </template>
 
 <script lang="js">
 
-import Framework from './../../components/Framework.vue'
+import mapbox from './../../components/mapbox.vue'
 
 
   export default  {
     name: 'sandbox-page',
     props: [],
     components: {
-      Framework
+      mapbox
     },
     mounted () {
 

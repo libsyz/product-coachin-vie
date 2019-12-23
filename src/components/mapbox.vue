@@ -23,7 +23,7 @@
         })
 
       new mapboxgl.Marker({
-        color: "#BADA55"
+        color: "#6C63FF"
       })
       .setLngLat([103.818213, 1.26496])
       .addTo(map)
@@ -54,7 +54,8 @@
   }
 
   #map {
-    min-height: 400px;
-    min-width: 400px;
+    height: 400px;
+    width: 400px;
+    overflow: visible;
   }
 </style>
